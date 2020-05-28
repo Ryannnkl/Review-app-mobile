@@ -18,6 +18,7 @@ export const ButtonExit = styled.TouchableOpacity`
   margin: 15px;
 `;
 
+
 export const Photo = styled.Image.attrs({
   source: require('../../../assets/photo.jpg')
 })`
@@ -82,14 +83,17 @@ export const CountLabel = styled.Text`
 export const Scroll = styled.ScrollView.attrs({
   showsVerticalScrollIndicator: false,
 })`
-  height: 200px;
+  height: 100%;
   width: 100%;
-  margin: 0 auto;
+  margin-bottom: 65px;
 `;
 
 export const HorizontalScroll = styled.ScrollView.attrs({
   horizontal: true,
-  showsHorizontalScrollIndicator: false
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: {
+    paddingLeft: 20
+  }
 })`
   width: 100%;
   height: 120px;
@@ -100,15 +104,16 @@ export const Info = styled.View`
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 20px;
+  margin: 20px 20px;
 `; 
 export const Title = styled.Text`
   font-size: 18px;
   align-items: flex-start;
   font-weight: bold;
-  color: #222;
+  color: #444;
 `;
 export const BioText = styled.Text`
+  width: 90%;
   font-size: 14px;
   flex-wrap: wrap;
   color: #333;
@@ -117,7 +122,35 @@ export const Card = styled.View`
   height: 100px;
   width: 85px;
   border-radius: 20px;
-  background-color: tomato;
+  background-color: crimson;
   margin-right: 10px;
 `;
+export const TextHelp = styled.Text`
+  margin: 0 10px;
+  color: #999;
+  font-size: 16px;
+`;
 
+export const Help = styled.TouchableOpacity`
+  height: 40px;
+  width: 90%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  border-bottom-width: ${StyleSheet.hairlineWidth}px;
+  border-bottom-color: #999;
+`;
+export const Exit = styled.TouchableOpacity`
+  width: 90%;
+  height: 44px;
+  border-radius: 12px;
+  background-color: rgba(255,31,12,0.9);
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ExitText = styled.Text`
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+`;
